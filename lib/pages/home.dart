@@ -15,7 +15,7 @@ class Home extends StatelessWidget {
           children: [
             Expanded(
                 child: Text(
-              'SeenIt',
+              'ReelTime',
               style: TextStyle(fontSize: 30),
             )),
             IconButton(

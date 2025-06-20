@@ -34,7 +34,8 @@ class SignIn extends StatelessWidget {
       child: Flex(
         direction: Axis.horizontal,
         children: [
-          ElevatedButton(onPressed: signInWithGoogle, child: Text("Sign In"))
+          ElevatedButton(
+              onPressed: signInWithGoogle, child: const Text("Sign In"))
         ],
       ),
     );
