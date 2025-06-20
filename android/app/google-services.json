@@ -1,52 +1,26 @@
 {
   "project_info": {
-    "project_number": "723797632984",
-    "firebase_url": "https://rtdb-repro-default-rtdb.firebaseio.com",
-    "project_id": "rtdb-repro",
-    "storage_bucket": "rtdb-repro.firebasestorage.app"
+    "project_number": "290209415070",
+    "project_id": "fluttercon-2025-mtewani",
+    "storage_bucket": "fluttercon-2025-mtewani.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:723797632984:android:e48d507e95f4c7046d34ad",
+        "mobilesdk_app_id": "1:290209415070:android:9d38bead207acbafce208f",
         "android_client_info": {
           "package_name": "com.example.movie_app_fluttercon25"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "723797632984-jgaeqi367psh1lqq6gqd3oph3nm88900.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.movie_app_fluttercon25",
-            "certificate_hash": "dbe8d1d08936f6e59f1f158c26e83708701a8798"
-          }
-        },
-        {
-          "client_id": "723797632984-oe1rs1u59gf810uvmmv9muv2a73016it.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyA0NpzoJ7T6hkzWCXEfIpa2Q5J5v9C6VFo"
+          "current_key": "AIzaSyDB2mp_Ka6pT3pXboC8CbduApqTXiVSN-o"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "723797632984-oe1rs1u59gf810uvmmv9muv2a73016it.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "723797632984-hsv0u7q5eh71uhn6pn8q25b36lcam4nj.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.example.movieAppFluttercon25"
-              }
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }
