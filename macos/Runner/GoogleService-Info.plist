@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>723797632984-hsv0u7q5eh71uhn6pn8q25b36lcam4nj.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.723797632984-hsv0u7q5eh71uhn6pn8q25b36lcam4nj</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>723797632984-jgaeqi367psh1lqq6gqd3oph3nm88900.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyButrdG9s5sn0kPh-3crBX_GZ7_BP2DwEc</string>
+	<key>GCM_SENDER_ID</key>
+	<string>723797632984</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.movieAppFluttercon25</string>
+	<key>PROJECT_ID</key>
+	<string>rtdb-repro</string>
+	<key>STORAGE_BUCKET</key>
+	<string>rtdb-repro.firebasestorage.app</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:723797632984:ios:19601beda131591b6d34ad</string>
+	<key>DATABASE_URL</key>
+	<string>https://rtdb-repro-default-rtdb.firebaseio.com</string>
+</dict>
+</plist>

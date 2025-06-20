@@ -1,0 +1,60 @@
+{
+  "featured": {
+    "movies": [
+      {
+        "title": "The Last Starship",
+        "genre": "Science Fiction",
+        "imageUrl": "https://firebasestorage.googleapis.com/v0/b/fluttercon-2025-mtewani.firebasestorage.app/o/the_last_starship.png?alt=media&token=a10ae70b-b403-4476-9a07-f742ba9c8245"
+      },
+      {
+        "title": "Echoes of Eternity",
+        "genre": "Science Fiction",
+        "imageUrl": "https://firebasestorage.googleapis.com/v0/b/fluttercon-2025-mtewani.firebasestorage.app/o/final_frontier.png?alt=media&token=27e80727-21a7-4e1e-a9c5-8a6953764463"
+      },
+      {
+        "title": "The Crimson Cipher",
+        "genre": "Thriller",
+        "imageUrl": "https://firebasestorage.googleapis.com/v0/b/fluttercon-2025-mtewani.firebasestorage.app/o/galaxy_on_fire.png?alt=media&token=b67a87a8-20e4-4b56-9b66-8f78a0b9ffb3"
+      },
+      {
+        "title": "Shadows of the Forgotten",
+        "genre": "Horror",
+        "imageUrl": "https://firebasestorage.googleapis.com/v0/b/fluttercon-2025-mtewani.firebasestorage.app/o/shadows_of_the_forgotten.png?alt=media&token=c4c95049-e06b-45e6-b22d-f092da2b2a5e"
+      },
+      {
+        "title": "The Clockwork Conspiracy",
+        "genre": "Thriller",
+        "imageUrl": "https://firebasestorage.googleapis.com/v0/b/fluttercon-2025-mtewani.firebasestorage.app/o/the_clockwork_conspiracy.png?alt=media&token=2d13ca80-6288-4a37-a122-cfb698deca04"
+      }
+    ]
+  },
+  "newReleases": {
+    "movies": [
+      {
+        "title": "Galaxy on Fire",
+        "genre": "Science Fiction",
+        "imageUrl": "https://firebasestorage.googleapis.com/v0/b/fluttercon-2025-mtewani.firebasestorage.app/o/the_crimson_cipher.png?alt=media&token=0dc51766-838a-4af6-b0d6-987633ec18f5"
+      },
+      {
+        "title": "The Silent City",
+        "genre": "Thriller",
+        "imageUrl": "https://firebasestorage.googleapis.com/v0/b/fluttercon-2025-mtewani.firebasestorage.app/o/the_silent_city.png?alt=media&token=45903a6d-8775-4a0f-8f43-c84f29d3a172"
+      },
+      {
+        "title": "The Last Oracle",
+        "genre": "Fantasy",
+        "imageUrl": "https://firebasestorage.googleapis.com/v0/b/fluttercon-2025-mtewani.firebasestorage.app/o/the_last_oracle.png?alt=media&token=2d62fe11-7b26-411c-9101-b2e6227d25f3"
+      },
+      {
+        "title": "The Martian Legacy",
+        "genre": "Science Fiction",
+        "imageUrl": "https://firebasestorage.googleapis.com/v0/b/fluttercon-2025-mtewani.firebasestorage.app/o/the_martian_legacy.png?alt=media&token=3f809950-25fb-4382-82c8-ffc0f6ae015c"
+      },
+      {
+        "title": "The Final Frontier",
+        "genre": "Science Fiction",
+        "imageUrl": "https://firebasestorage.googleapis.com/v0/b/fluttercon-2025-mtewani.firebasestorage.app/o/final_frontier.png?alt=media&token=27e80727-21a7-4e1e-a9c5-8a6953764463"
+      }
+    ]
+  }
+}
