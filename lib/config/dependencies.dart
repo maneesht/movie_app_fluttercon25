@@ -4,6 +4,9 @@ import 'package:movie_app_fluttercon25/services/local/local_data_service.dart';
 import 'package:provider/provider.dart';
 import 'package:provider/single_child_widget.dart';
 
+import '../repositories/movies/movie_repository_firebase.dart';
+import '../services/firebase/firebase_data_service.dart';
+
 List<SingleChildWidget> get providersLocal {
   return [
     Provider.value(value: LocalDataService()),
