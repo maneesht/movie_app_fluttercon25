@@ -9,3 +9,20 @@ query getWatchedMovies($userId: String!) @auth(level: USER) {
     }
   }
 }
+query getTopRatedMovies @auth(level: USER) {
+  movies(limit: 10, orderBy: [{ rating: DESC }]) {
+    id
+    title
+    description
+    imageUrl
+  }
+}
+
+query getMostRecent @auth(level: USER) {
+  movies(limit: 10, orderBy: [{ releaseYear: DESC }]) {
+    id
+    title
+    description
+    imageUrl
+  }
+}

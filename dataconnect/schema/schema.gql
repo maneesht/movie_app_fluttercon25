@@ -9,6 +9,8 @@ type Movie @table {
   title: String!
   description: String!
   imageUrl: String!
+  rating: Int!
+  releaseYear: Int!
   # Data Connect will automatically add a primary key `id: UUID!`.
   # It's a good practice to use an external ID from a service like TMDB or IMDb
   # to easily fetch or update movie details.

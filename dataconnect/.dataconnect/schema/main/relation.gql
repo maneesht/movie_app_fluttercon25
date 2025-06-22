@@ -112,6 +112,24 @@ extend type Movie {
     distinct: Boolean = false
   ): Int! @fdc_generated(from: "Movie.imageUrl", purpose: QUERY_COUNT)
   """
+  ✨ Count the number of rows in the `Movie` table where the `rating` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  rating_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Movie.rating", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Movie` table where the `releaseYear` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  releaseYear_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Movie.releaseYear", purpose: QUERY_COUNT)
+  """
   ✨ Count the number of rows in the `Movie` table where the `title` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
   """
   title_count(
@@ -120,6 +138,58 @@ extend type Movie {
     """
     distinct: Boolean = false
   ): Int! @fdc_generated(from: "Movie.title", purpose: QUERY_COUNT)
+  """
+  ✨ Sum the `rating` field in the `Movie` table.
+  """
+  rating_sum(
+    """
+    Set to true to sum the distinct values.
+    """
+    distinct: Boolean = false
+  ): Int @fdc_generated(from: "Movie.rating", purpose: QUERY_SUM)
+  """
+  ✨ Sum the `releaseYear` field in the `Movie` table.
+  """
+  releaseYear_sum(
+    """
+    Set to true to sum the distinct values.
+    """
+    distinct: Boolean = false
+  ): Int @fdc_generated(from: "Movie.releaseYear", purpose: QUERY_SUM)
+  """
+  ✨ Average the `rating` field in the `Movie` table.
+  """
+  rating_avg(
+    """
+    Set to true to average the distinct values.
+    """
+    distinct: Boolean = false
+  ): Float @fdc_generated(from: "Movie.rating", purpose: QUERY_AVG)
+  """
+  ✨ Average the `releaseYear` field in the `Movie` table.
+  """
+  releaseYear_avg(
+    """
+    Set to true to average the distinct values.
+    """
+    distinct: Boolean = false
+  ): Float @fdc_generated(from: "Movie.releaseYear", purpose: QUERY_AVG)
+  """
+  ✨ Minimum of the `rating` field in the `Movie` table.
+  """
+  rating_min: Int @fdc_generated(from: "Movie.rating", purpose: QUERY_MIN)
+  """
+  ✨ Minimum of the `releaseYear` field in the `Movie` table.
+  """
+  releaseYear_min: Int @fdc_generated(from: "Movie.releaseYear", purpose: QUERY_MIN)
+  """
+  ✨ Maximum of the `rating` field in the `Movie` table.
+  """
+  rating_max: Int @fdc_generated(from: "Movie.rating", purpose: QUERY_MAX)
+  """
+  ✨ Maximum of the `releaseYear` field in the `Movie` table.
+  """
+  releaseYear_max: Int @fdc_generated(from: "Movie.releaseYear", purpose: QUERY_MAX)
 }
 extend type User {
   """

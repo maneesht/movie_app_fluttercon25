@@ -53,6 +53,30 @@ input Movie_Data {
   """
   imageUrl_expr: String_Expr
   """
+  ✨ Generated from Field `Movie`.`rating` of type `Int!`
+  """
+  rating: Int
+  """
+  ✨ `_expr` server value variant of `rating` (✨ Generated from Field `Movie`.`rating` of type `Int!`)
+  """
+  rating_expr: Int_Expr
+  """
+  ✨ `_update` server value variant of `rating` (✨ Generated from Field `Movie`.`rating` of type `Int!`)
+  """
+  rating_update: [Int_Update!]
+  """
+  ✨ Generated from Field `Movie`.`releaseYear` of type `Int!`
+  """
+  releaseYear: Int
+  """
+  ✨ `_expr` server value variant of `releaseYear` (✨ Generated from Field `Movie`.`releaseYear` of type `Int!`)
+  """
+  releaseYear_expr: Int_Expr
+  """
+  ✨ `_update` server value variant of `releaseYear` (✨ Generated from Field `Movie`.`releaseYear` of type `Int!`)
+  """
+  releaseYear_update: [Int_Update!]
+  """
   ✨ Generated from Field `Movie`.`title` of type `String!`
   """
   title: String
@@ -93,6 +117,14 @@ input Movie_Filter {
   ✨ Generated from Field `Movie`.`imageUrl` of type `String!`
   """
   imageUrl: String_Filter
+  """
+  ✨ Generated from Field `Movie`.`rating` of type `Int!`
+  """
+  rating: Int_Filter
+  """
+  ✨ Generated from Field `Movie`.`releaseYear` of type `Int!`
+  """
+  releaseYear: Int_Filter
   """
   ✨ Generated from Field `Movie`.`title` of type `String!`
   """
@@ -160,9 +192,49 @@ input Movie_Having {
   """
   imageUrl_count: Int_Filter
   """
+  ✨ Generated from Field `Movie`.`rating_count` of type `Int!`
+  """
+  rating_count: Int_Filter
+  """
+  ✨ Generated from Field `Movie`.`releaseYear_count` of type `Int!`
+  """
+  releaseYear_count: Int_Filter
+  """
   ✨ Generated from Field `Movie`.`title_count` of type `Int!`
   """
   title_count: Int_Filter
+  """
+  ✨ Generated from Field `Movie`.`rating_sum` of type `Int`
+  """
+  rating_sum: Int_Filter
+  """
+  ✨ Generated from Field `Movie`.`releaseYear_sum` of type `Int`
+  """
+  releaseYear_sum: Int_Filter
+  """
+  ✨ Generated from Field `Movie`.`rating_avg` of type `Float`
+  """
+  rating_avg: Float_Filter
+  """
+  ✨ Generated from Field `Movie`.`releaseYear_avg` of type `Float`
+  """
+  releaseYear_avg: Float_Filter
+  """
+  ✨ Generated from Field `Movie`.`rating_min` of type `Int`
+  """
+  rating_min: Int_Filter
+  """
+  ✨ Generated from Field `Movie`.`releaseYear_min` of type `Int`
+  """
+  releaseYear_min: Int_Filter
+  """
+  ✨ Generated from Field `Movie`.`rating_max` of type `Int`
+  """
+  rating_max: Int_Filter
+  """
+  ✨ Generated from Field `Movie`.`releaseYear_max` of type `Int`
+  """
+  releaseYear_max: Int_Filter
 }
 """
 ✨ Generated key input type for table 'Movie'. It represents the primary key fields used to uniquely identify a row in the table.
@@ -210,6 +282,14 @@ input Movie_Order {
   ✨ Generated from Field `Movie`.`imageUrl` of type `String!`
   """
   imageUrl: OrderDirection
+  """
+  ✨ Generated from Field `Movie`.`rating` of type `Int!`
+  """
+  rating: OrderDirection
+  """
+  ✨ Generated from Field `Movie`.`releaseYear` of type `Int!`
+  """
+  releaseYear: OrderDirection
   """
   ✨ Generated from Field `Movie`.`title` of type `String!`
   """

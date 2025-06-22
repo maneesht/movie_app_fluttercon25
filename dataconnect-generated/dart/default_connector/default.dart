@@ -4,6 +4,10 @@ import 'dart:convert';
 
 part 'get_watched_movies.dart';
 
+part 'get_top_rated_movies.dart';
+
+part 'get_most_recent.dart';
+
 
 
 
@@ -15,6 +19,16 @@ class DefaultConnector {
   
   GetWatchedMoviesVariablesBuilder getWatchedMovies ({required String userId, }) {
     return GetWatchedMoviesVariablesBuilder(dataConnect, userId: userId,);
+  }
+  
+  
+  GetTopRatedMoviesVariablesBuilder getTopRatedMovies () {
+    return GetTopRatedMoviesVariablesBuilder(dataConnect, );
+  }
+  
+  
+  GetMostRecentVariablesBuilder getMostRecent () {
+    return GetMostRecentVariablesBuilder(dataConnect, );
   }
   
 
