@@ -1,0 +1,519 @@
+"""
+✨ `Movie_KeyOutput` returns the primary key fields of table type `Movie`.
+
+It has the same format as `Movie_Key`, but is only used as mutation return value.
+"""
+scalar Movie_KeyOutput
+"""
+✨ `User_KeyOutput` returns the primary key fields of table type `User`.
+
+It has the same format as `User_Key`, but is only used as mutation return value.
+"""
+scalar User_KeyOutput
+"""
+✨ `Watch_KeyOutput` returns the primary key fields of table type `Watch`.
+
+It has the same format as `Watch_Key`, but is only used as mutation return value.
+"""
+scalar Watch_KeyOutput
+"""
+✨ Generated data input type for table 'Movie'. It includes all necessary fields for creating or upserting rows into table.
+"""
+input Movie_Data {
+  """
+  ✨ Generated from Field `Movie`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Movie`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Movie`.`description` of type `String!`
+  """
+  description: String
+  """
+  ✨ `_expr` server value variant of `description` (✨ Generated from Field `Movie`.`description` of type `String!`)
+  """
+  description_expr: String_Expr
+  """
+  ✨ Generated from Field `Movie`.`externalId` of type `String`
+  """
+  externalId: String
+  """
+  ✨ `_expr` server value variant of `externalId` (✨ Generated from Field `Movie`.`externalId` of type `String`)
+  """
+  externalId_expr: String_Expr
+  """
+  ✨ Generated from Field `Movie`.`imageUrl` of type `String!`
+  """
+  imageUrl: String
+  """
+  ✨ `_expr` server value variant of `imageUrl` (✨ Generated from Field `Movie`.`imageUrl` of type `String!`)
+  """
+  imageUrl_expr: String_Expr
+  """
+  ✨ Generated from Field `Movie`.`title` of type `String!`
+  """
+  title: String
+  """
+  ✨ `_expr` server value variant of `title` (✨ Generated from Field `Movie`.`title` of type `String!`)
+  """
+  title_expr: String_Expr
+}
+"""
+✨ Generated filter input type for table 'Movie'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Movie_Filter {
+  """
+  Apply multiple filter conditions using `AND` logic.
+  """
+  _and: [Movie_Filter!]
+  """
+  Negate the result of the provided filter condition.
+  """
+  _not: Movie_Filter
+  """
+  Apply multiple filter conditions using `OR` logic.
+  """
+  _or: [Movie_Filter!]
+  """
+  ✨ Generated from Field `Movie`.`id` of type `UUID!`
+  """
+  id: UUID_Filter
+  """
+  ✨ Generated from Field `Movie`.`description` of type `String!`
+  """
+  description: String_Filter
+  """
+  ✨ Generated from Field `Movie`.`externalId` of type `String`
+  """
+  externalId: String_Filter
+  """
+  ✨ Generated from Field `Movie`.`imageUrl` of type `String!`
+  """
+  imageUrl: String_Filter
+  """
+  ✨ Generated from Field `Movie`.`title` of type `String!`
+  """
+  title: String_Filter
+  """
+  ✨ Generated from Field `Movie`.`watches_on_movie` of type `[Watch!]!`
+  """
+  watches_on_movie: Watch_ListFilter
+  """
+  ✨ Generated from Field `Movie`.`users_via_Watch` of type `[User!]!`
+  """
+  users_via_Watch: User_ListFilter
+}
+"""
+✨ Generated first-row input type for table 'Movie'. This input selects the first row matching the filter criteria, ordered according to the specified conditions.
+"""
+input Movie_FirstRow {
+  """
+  Order the result by the specified fields.
+  """
+  orderBy: [Movie_Order!]
+  """
+  Filters rows based on the specified conditions.
+  """
+  where: Movie_Filter
+}
+"""
+✨ Generated having input type for table 'Movie'. This input allows you to filter groups during aggregate queries using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Movie_Having {
+  """
+  Apply multiple Having conditions using `AND` logic.
+  """
+  _and: [Movie_Having!]
+  """
+  Whether to apply DISTINCT to the aggregate function.
+  """
+  _distinct: Boolean
+  """
+  Negate the result of the provided Having condition.
+  """
+  _not: Movie_Having
+  """
+  Apply multiple Having conditions using `OR` logic.
+  """
+  _or: [Movie_Having!]
+  """
+  ✨ Generated from Field `Movie`.`_count` of type `Int!`
+  """
+  _count: Int_Filter
+  """
+  ✨ Generated from Field `Movie`.`description_count` of type `Int!`
+  """
+  description_count: Int_Filter
+  """
+  ✨ Generated from Field `Movie`.`externalId_count` of type `Int!`
+  """
+  externalId_count: Int_Filter
+  """
+  ✨ Generated from Field `Movie`.`id_count` of type `Int!`
+  """
+  id_count: Int_Filter
+  """
+  ✨ Generated from Field `Movie`.`imageUrl_count` of type `Int!`
+  """
+  imageUrl_count: Int_Filter
+  """
+  ✨ Generated from Field `Movie`.`title_count` of type `Int!`
+  """
+  title_count: Int_Filter
+}
+"""
+✨ Generated key input type for table 'Movie'. It represents the primary key fields used to uniquely identify a row in the table.
+"""
+input Movie_Key {
+  """
+  ✨ Generated from Field `Movie`.`id` of type `UUID!`
+  """
+  id: UUID
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `Movie`.`id` of type `UUID!`)
+  """
+  id_expr: UUID_Expr
+}
+"""
+✨ Generated list filter input type for table 'Movie'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input Movie_ListFilter {
+  """
+  The desired number of objects that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: Movie_Filter
+}
+"""
+✨ Generated order input type for table 'Movie'. This input defines the sorting order of rows in query results based on one or more fields.
+"""
+input Movie_Order {
+  """
+  ✨ Generated from Field `Movie`.`id` of type `UUID!`
+  """
+  id: OrderDirection
+  """
+  ✨ Generated from Field `Movie`.`description` of type `String!`
+  """
+  description: OrderDirection
+  """
+  ✨ Generated from Field `Movie`.`externalId` of type `String`
+  """
+  externalId: OrderDirection
+  """
+  ✨ Generated from Field `Movie`.`imageUrl` of type `String!`
+  """
+  imageUrl: OrderDirection
+  """
+  ✨ Generated from Field `Movie`.`title` of type `String!`
+  """
+  title: OrderDirection
+}
+"""
+✨ Generated data input type for table 'User'. It includes all necessary fields for creating or upserting rows into table.
+"""
+input User_Data {
+  """
+  ✨ Generated from Field `User`.`id` of type `String!`
+  """
+  id: String
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `User`.`id` of type `String!`)
+  """
+  id_expr: String_Expr
+  """
+  ✨ Generated from Field `User`.`email` of type `String`
+  """
+  email: String
+  """
+  ✨ `_expr` server value variant of `email` (✨ Generated from Field `User`.`email` of type `String`)
+  """
+  email_expr: String_Expr
+}
+"""
+✨ Generated filter input type for table 'User'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input User_Filter {
+  """
+  Apply multiple filter conditions using `AND` logic.
+  """
+  _and: [User_Filter!]
+  """
+  Negate the result of the provided filter condition.
+  """
+  _not: User_Filter
+  """
+  Apply multiple filter conditions using `OR` logic.
+  """
+  _or: [User_Filter!]
+  """
+  ✨ Generated from Field `User`.`id` of type `String!`
+  """
+  id: String_Filter
+  """
+  ✨ Generated from Field `User`.`email` of type `String`
+  """
+  email: String_Filter
+  """
+  ✨ Generated from Field `User`.`watches_on_user` of type `[Watch!]!`
+  """
+  watches_on_user: Watch_ListFilter
+  """
+  ✨ Generated from Field `User`.`movies_via_Watch` of type `[Movie!]!`
+  """
+  movies_via_Watch: Movie_ListFilter
+}
+"""
+✨ Generated first-row input type for table 'User'. This input selects the first row matching the filter criteria, ordered according to the specified conditions.
+"""
+input User_FirstRow {
+  """
+  Order the result by the specified fields.
+  """
+  orderBy: [User_Order!]
+  """
+  Filters rows based on the specified conditions.
+  """
+  where: User_Filter
+}
+"""
+✨ Generated having input type for table 'User'. This input allows you to filter groups during aggregate queries using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input User_Having {
+  """
+  Apply multiple Having conditions using `AND` logic.
+  """
+  _and: [User_Having!]
+  """
+  Whether to apply DISTINCT to the aggregate function.
+  """
+  _distinct: Boolean
+  """
+  Negate the result of the provided Having condition.
+  """
+  _not: User_Having
+  """
+  Apply multiple Having conditions using `OR` logic.
+  """
+  _or: [User_Having!]
+  """
+  ✨ Generated from Field `User`.`_count` of type `Int!`
+  """
+  _count: Int_Filter
+  """
+  ✨ Generated from Field `User`.`email_count` of type `Int!`
+  """
+  email_count: Int_Filter
+  """
+  ✨ Generated from Field `User`.`id_count` of type `Int!`
+  """
+  id_count: Int_Filter
+}
+"""
+✨ Generated key input type for table 'User'. It represents the primary key fields used to uniquely identify a row in the table.
+"""
+input User_Key {
+  """
+  ✨ Generated from Field `User`.`id` of type `String!`
+  """
+  id: String
+  """
+  ✨ `_expr` server value variant of `id` (✨ Generated from Field `User`.`id` of type `String!`)
+  """
+  id_expr: String_Expr
+}
+"""
+✨ Generated list filter input type for table 'User'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input User_ListFilter {
+  """
+  The desired number of objects that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: User_Filter
+}
+"""
+✨ Generated order input type for table 'User'. This input defines the sorting order of rows in query results based on one or more fields.
+"""
+input User_Order {
+  """
+  ✨ Generated from Field `User`.`id` of type `String!`
+  """
+  id: OrderDirection
+  """
+  ✨ Generated from Field `User`.`email` of type `String`
+  """
+  email: OrderDirection
+}
+"""
+✨ Generated data input type for table 'Watch'. It includes all necessary fields for creating or upserting rows into table.
+"""
+input Watch_Data {
+  """
+  ✨ Generated from Field `Watch`.`userId` of type `String!`
+  """
+  userId: String
+  """
+  ✨ `_expr` server value variant of `userId` (✨ Generated from Field `Watch`.`userId` of type `String!`)
+  """
+  userId_expr: String_Expr
+  """
+  ✨ Generated from Field `Watch`.`movieId` of type `UUID!`
+  """
+  movieId: UUID
+  """
+  ✨ `_expr` server value variant of `movieId` (✨ Generated from Field `Watch`.`movieId` of type `UUID!`)
+  """
+  movieId_expr: UUID_Expr
+  """
+  ✨ Generated from Field `Watch`.`movie` of type `Movie!`
+  """
+  movie: Movie_Key
+  """
+  ✨ Generated from Field `Watch`.`user` of type `User!`
+  """
+  user: User_Key
+}
+"""
+✨ Generated filter input type for table 'Watch'. This input allows filtering objects using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Watch_Filter {
+  """
+  Apply multiple filter conditions using `AND` logic.
+  """
+  _and: [Watch_Filter!]
+  """
+  Negate the result of the provided filter condition.
+  """
+  _not: Watch_Filter
+  """
+  Apply multiple filter conditions using `OR` logic.
+  """
+  _or: [Watch_Filter!]
+  """
+  ✨ Generated from Field `Watch`.`userId` of type `String!`
+  """
+  userId: String_Filter
+  """
+  ✨ Generated from Field `Watch`.`movieId` of type `UUID!`
+  """
+  movieId: UUID_Filter
+  """
+  ✨ Generated from Field `Watch`.`movie` of type `Movie!`
+  """
+  movie: Movie_Filter
+  """
+  ✨ Generated from Field `Watch`.`user` of type `User!`
+  """
+  user: User_Filter
+}
+"""
+✨ Generated first-row input type for table 'Watch'. This input selects the first row matching the filter criteria, ordered according to the specified conditions.
+"""
+input Watch_FirstRow {
+  """
+  Order the result by the specified fields.
+  """
+  orderBy: [Watch_Order!]
+  """
+  Filters rows based on the specified conditions.
+  """
+  where: Watch_Filter
+}
+"""
+✨ Generated having input type for table 'Watch'. This input allows you to filter groups during aggregate queries using various conditions. Use `_or`, `_and`, and `_not` to compose complex filters.
+"""
+input Watch_Having {
+  """
+  Apply multiple Having conditions using `AND` logic.
+  """
+  _and: [Watch_Having!]
+  """
+  Whether to apply DISTINCT to the aggregate function.
+  """
+  _distinct: Boolean
+  """
+  Negate the result of the provided Having condition.
+  """
+  _not: Watch_Having
+  """
+  Apply multiple Having conditions using `OR` logic.
+  """
+  _or: [Watch_Having!]
+  """
+  ✨ Generated from Field `Watch`.`_count` of type `Int!`
+  """
+  _count: Int_Filter
+  """
+  ✨ Generated from Field `Watch`.`movieId_count` of type `Int!`
+  """
+  movieId_count: Int_Filter
+  """
+  ✨ Generated from Field `Watch`.`userId_count` of type `Int!`
+  """
+  userId_count: Int_Filter
+}
+"""
+✨ Generated key input type for table 'Watch'. It represents the primary key fields used to uniquely identify a row in the table.
+"""
+input Watch_Key {
+  """
+  ✨ Generated from Field `Watch`.`userId` of type `String!`
+  """
+  userId: String
+  """
+  ✨ `_expr` server value variant of `userId` (✨ Generated from Field `Watch`.`userId` of type `String!`)
+  """
+  userId_expr: String_Expr
+  """
+  ✨ Generated from Field `Watch`.`movieId` of type `UUID!`
+  """
+  movieId: UUID
+  """
+  ✨ `_expr` server value variant of `movieId` (✨ Generated from Field `Watch`.`movieId` of type `UUID!`)
+  """
+  movieId_expr: UUID_Expr
+}
+"""
+✨ Generated list filter input type for table 'Watch'. This input applies filtering logic based on the count or existence of related objects that matches certain criteria.
+"""
+input Watch_ListFilter {
+  """
+  The desired number of objects that match the condition (defaults to at least one).
+  """
+  count: Int_Filter = {gt:0}
+  """
+  Condition of the related objects to filter for.
+  """
+  exist: Watch_Filter
+}
+"""
+✨ Generated order input type for table 'Watch'. This input defines the sorting order of rows in query results based on one or more fields.
+"""
+input Watch_Order {
+  """
+  ✨ Generated from Field `Watch`.`userId` of type `String!`
+  """
+  userId: OrderDirection
+  """
+  ✨ Generated from Field `Watch`.`movieId` of type `UUID!`
+  """
+  movieId: OrderDirection
+  """
+  ✨ Generated from Field `Watch`.`movie` of type `Movie!`
+  """
+  movie: Movie_Order
+  """
+  ✨ Generated from Field `Watch`.`user` of type `User!`
+  """
+  user: User_Order
+}

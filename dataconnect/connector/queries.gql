@@ -1,0 +1,11 @@
+query getWatchedMovies($userId: String!) @auth(level: USER) {
+  watches(where: { user: { id: { eq: $userId } } }) {
+    movie {
+      id
+      title
+      description
+      imageUrl
+      externalId
+    }
+  }
+}

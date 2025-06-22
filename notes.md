@@ -1,0 +1,2 @@
+- [ ] Clean up logo and make sure it doesn't have any extra height
+- [ ] Create better fake data

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:movie_app_fluttercon25/config/routes.dart';
-import 'package:movie_app_fluttercon25/pages/home.dart';
+import 'package:movie_app_fluttercon25/pages/home/home.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'main_development.dart' as development;
 import 'firebase_options.dart';
 import 'config/theme.dart';
 
@@ -10,7 +11,9 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(const MainApp());
+  development.main();
+  // runApp(const MainApp());
+  // TODO: Use Firebase environment
 }
 
 class MainApp extends StatelessWidget {
@@ -22,6 +25,9 @@ class MainApp extends StatelessWidget {
       routerConfig: goRouter,
       theme: lightTheme,
       darkTheme: darkTheme,
+      builder: (context, child) => Scaffold(
+        body: SafeArea(child: child!),
+      ),
       themeMode: ThemeMode
           .dark, // TODO: Use system and change system default to dark mode
     );
