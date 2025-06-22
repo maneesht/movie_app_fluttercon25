@@ -1,8 +1,8 @@
-import 'package:movie_app_fluttercon25/model/movie_json.dart';
-
 import '../../model/movie.dart';
 
 abstract class MovieRepository {
-  Future<MovieJson> getMovies();
+  Future<List<Movie>> getTopTenMovies();
+  Future<List<Movie>> getMostRecentMovies();
+  Future<List<Movie>> getAllMovies();
   Future<Movie> getMovie(String id);
 }

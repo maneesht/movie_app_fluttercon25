@@ -1,80 +1,94 @@
 {
-  "featured": {
     "movies": [
       {
         "id": "001",
         "title": "The Last Starship",
         "genre": "Science Fiction",
         "imageUrl": "https://firebasestorage.googleapis.com/v0/b/fluttercon-2025-mtewani.firebasestorage.app/o/the_last_starship.png?alt=media&token=a10ae70b-b403-4476-9a07-f742ba9c8245",
-        "description": "In a distant future where Earth is no longer habitable, the remnants of humanity journey through the cosmos aboard a single, colossal starship. As they face dwindling resources and internal strife, they must uncover the ship's deepest secrets to find a new home before they are lost to the void."
+        "description": "In a distant future where Earth is no longer habitable, the remnants of humanity journey through the cosmos aboard a single, colossal starship. As they face dwindling resources and internal strife, they must uncover the ship's deepest secrets to find a new home before they are lost to the void.",
+        "rating": 8.5,
+        "releaseYear": 2022
       },
       {
         "id": "002",
         "title": "Echoes of Eternity",
         "genre": "Science Fiction",
         "imageUrl": "https://firebasestorage.googleapis.com/v0/b/fluttercon-2025-mtewani.firebasestorage.app/o/echoes_of_eternity.png?alt=media&token=18b95c2c-ee93-488e-b991-1e87fc52f97e",
-        "description": "A brilliant physicist discovers a way to receive messages from the future, but the cryptic warnings she deciphers point to an impending catastrophe. She must race against time to prevent a disaster that hasn't happened yet, all while being pursued by those who want to control her power."
+        "description": "A brilliant physicist discovers a way to receive messages from the future, but the cryptic warnings she deciphers point to an impending catastrophe. She must race against time to prevent a disaster that hasn't happened yet, all while being pursued by those who want to control her power.",
+        "rating": 7.9,
+        "releaseYear": 2021
       },
       {
         "id": "003",
         "title": "The Crimson Cipher",
         "genre": "Thriller",
         "imageUrl": "https://firebasestorage.googleapis.com/v0/b/fluttercon-2025-mtewani.firebasestorage.app/o/galaxy_on_fire.png?alt=media&token=b67a87a8-20e4-4b56-9b66-8f78a0b9ffb3",
-        "description": "When a world-renowned symbologist is found dead, his estranged daughter, a master cryptographer, is drawn into a shadowy world of secret societies and ancient conspiracies. The key to unraveling the mystery lies in a complex cipher that guards a truth powerful enough to shatter empires."
+        "description": "When a world-renowned symbologist is found dead, his estranged daughter, a master cryptographer, is drawn into a shadowy world of secret societies and ancient conspiracies. The key to unraveling the mystery lies in a complex cipher that guards a truth powerful enough to shatter empires.",
+        "rating": 8.1,
+        "releaseYear": 2020
       },
       {
         "id": "004",
         "title": "Shadows of the Forgotten",
         "genre": "Horror",
         "imageUrl": "https://firebasestorage.googleapis.com/v0/b/fluttercon-2025-mtewani.firebasestorage.app/o/shadows_of_the_forgotten.png?alt=media&token=c4c95049-e06b-45e6-b22d-f092da2b2a5e",
-        "description": "A group of paranormal investigators exploring a long-abandoned mining town accidentally awakens a malevolent spirit tied to the town's tragic past. Trapped by a sudden snowstorm, they must confront the darkness they've unleashed before they become the next forgotten souls."
+        "description": "A group of paranormal investigators exploring a long-abandoned mining town accidentally awakens a malevolent spirit tied to the town's tragic past. Trapped by a sudden snowstorm, they must confront the darkness they've unleashed before they become the next forgotten souls.",
+        "rating": 7.5,
+        "releaseYear": 2019
       },
       {
         "id": "005",
         "title": "The Clockwork Conspiracy",
         "genre": "Thriller",
         "imageUrl": "https://firebasestorage.googleapis.com/v0/b/fluttercon-2025-mtewani.firebasestorage.app/o/the_clockwork_conspiracy.png?alt=media&token=2d13ca80-6288-4a37-a122-cfb698deca04",
-        "description": "In a steampunk version of Victorian London, a meticulous detective uncovers a plot to overthrow the monarchy using an army of sophisticated automatons. He must navigate a web of political intrigue and mechanical marvels to expose the conspirators before the ticking clock runs out."
-      }
-    ]
-  },
-  "newReleases": {
-    "movies": [
+        "description": "In a steampunk version of Victorian London, a meticulous detective uncovers a plot to overthrow the monarchy using an army of sophisticated automatons. He must navigate a web of political intrigue and mechanical marvels to expose the conspirators before the ticking clock runs out.",
+        "rating": 8.8,
+        "releaseYear": 2023
+      },
       {
         "id": "006",
         "title": "Galaxy on Fire",
         "genre": "Science Fiction",
         "imageUrl": "https://firebasestorage.googleapis.com/v0/b/fluttercon-2025-mtewani.firebasestorage.app/o/the_crimson_cipher.png?alt=media&token=0dc51766-838a-4af6-b0d6-987633ec18f5",
-        "description": "A hotshot space pilot gets caught in the middle of a galactic war between a tyrannical empire and a fledgling rebellion. With his own planet at stake, he must choose a side and become the hero the galaxy needs to avoid being consumed by the flames of conflict."
+        "description": "A hotshot space pilot gets caught in the middle of a galactic war between a tyrannical empire and a fledgling rebellion. With his own planet at stake, he must choose a side and become the hero the galaxy needs to avoid being consumed by the flames of conflict.",
+        "rating": 9.0,
+        "releaseYear": 2025
       },
       {
         "id": "007",
         "title": "The Silent City",
         "genre": "Thriller",
         "imageUrl": "https://firebasestorage.googleapis.com/v0/b/fluttercon-2025-mtewani.firebasestorage.app/o/the_silent_city.png?alt=media&token=45903a6d-8775-4a0f-8f43-c84f29d3a172",
-        "description": "After a mysterious event causes the entire population of a bustling metropolis to vanish overnight, a lone survivor must navigate the eerie emptiness to find out what happened. She soon discovers she is not alone, and the silence is hiding a terrifying secret."
+        "description": "After a mysterious event causes the entire population of a bustling metropolis to vanish overnight, a lone survivor must navigate the eerie emptiness to find out what happened. She soon discovers she is not alone, and the silence is hiding a terrifying secret.",
+        "rating": 8.2,
+        "releaseYear": 2024
       },
       {
         "id": "008",
         "title": "The Last Oracle",
         "genre": "Fantasy",
         "imageUrl": "https://firebasestorage.googleapis.com/v0/b/fluttercon-2025-mtewani.firebasestorage.app/o/the_last_oracle.png?alt=media&token=2d62fe11-7b26-411c-9101-b2e6227d25f3",
-        "description": "In a land where magic is fading, a young woman discovers she is the last descendant of a line of powerful oracles. She must embark on a perilous quest to awaken her dormant powers and save her kingdom from a creeping darkness that threatens to consume all."
+        "description": "In a land where magic is fading, a young woman discovers she is the last descendant of a line of powerful oracles. She must embark on a perilous quest to awaken her dormant powers and save her kingdom from a creeping darkness that threatens to consume all.",
+        "rating": 8.6,
+        "releaseYear": 2025
       },
       {
         "id": "009",
         "title": "The Martian Legacy",
         "genre": "Science Fiction",
         "imageUrl": "https://firebasestorage.googleapis.com/v0/b/fluttercon-2025-mtewani.firebasestorage.app/o/the_martian_legacy.png?alt=media&token=3f809950-25fb-4382-82c8-ffc0f6ae015c",
-        "description": "The first human colony on Mars unearths a startling discovery: the remains of an ancient, alien civilization. As they begin to study the advanced technology left behind, they realize this legacy could either be the key to humanity's future or the catalyst for its extinction."
+        "description": "The first human colony on Mars unearths a startling discovery: the remains of an ancient, alien civilization. As they begin to study the advanced technology left behind, they realize this legacy could either be the key to humanity's future or the catalyst for its extinction.",
+        "rating": 8.9,
+        "releaseYear": 2024
       },
       {
         "id": "0010",
         "title": "The Final Frontier",
         "genre": "Science Fiction",
         "imageUrl": "https://firebasestorage.googleapis.com/v0/b/fluttercon-2025-mtewani.firebasestorage.app/o/final_frontier.png?alt=media&token=27e80727-21a7-4e1e-a9c5-8a6953764463",
-        "description": "The determined crew of the starship 'Venture' embarks on a historic mission to travel beyond the known boundaries of the universe. They encounter bizarre new lifeforms and breathtaking cosmic phenomena, but the greatest danger may come from the psychological toll of being truly alone in the vast, final frontier."
+        "description": "The determined crew of the starship 'Venture' embarks on a historic mission to travel beyond the known boundaries of the universe. They encounter bizarre new lifeforms and breathtaking cosmic phenomena, but the greatest danger may come from the psychological toll of being truly alone in the vast, final frontier.",
+        "rating": 9.2,
+        "releaseYear": 2025
       }
     ]
-  }
 }

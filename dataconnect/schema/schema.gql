@@ -8,6 +8,7 @@ type User @table {
 type Movie @table {
   title: String!
   description: String!
+  genre: String!
   imageUrl: String!
   rating: Int!
   releaseYear: Int!

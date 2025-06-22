@@ -32,27 +32,27 @@ class Home extends StatelessWidget {
           ],
         ),
         FutureBuilder(
-            future: model.movieRepository.getMovies(),
-            builder: (context, AsyncSnapshot<MovieJson> snapshot) {
+            future: model.movieRepository.getTopTenMovies(),
+            builder: (context, AsyncSnapshot<List<Movie>> snapshot) {
               if (snapshot.hasError) {
                 return Text(snapshot.error.toString());
               }
               if (snapshot.hasData) {
                 return MovieCarousel(
-                    movies: snapshot.data!.featured, title: "Featured Movies");
+                    movies: snapshot.data!, title: "Top 10 Movies");
               } else {
                 return const CircularProgressIndicator();
               }
             }),
         FutureBuilder(
-          future: model.movieRepository.getMovies(),
-          builder: (context, AsyncSnapshot<MovieJson> snapshot) {
+          future: model.movieRepository.getMostRecentMovies(),
+          builder: (context, AsyncSnapshot<List<Movie>> snapshot) {
             if (snapshot.hasError) {
               return Text(snapshot.error.toString());
             }
             if (snapshot.hasData) {
               return MovieCarousel(
-                  movies: snapshot.data!.newReleases,
+                  movies: snapshot.data!,
                   title: "New Releases",
                   size: MovieSize.small);
             } else {
@@ -61,15 +61,15 @@ class Home extends StatelessWidget {
           },
         ),
         FutureBuilder(
-          future: model.movieRepository.getMovies(),
-          builder: (context, AsyncSnapshot<MovieJson> snapshot) {
+          future: model.movieRepository.getAllMovies(),
+          builder: (context, AsyncSnapshot<List<Movie>> snapshot) {
             if (snapshot.hasError) {
               return Text(snapshot.error.toString());
             }
             if (snapshot.hasData) {
               return MovieCarousel(
-                  movies: snapshot.data!.newReleases,
-                  title: "Most Popular",
+                  movies: snapshot.data!,
+                  title: "All Movies",
                   size: MovieSize.small);
             } else {
               return const CircularProgressIndicator();

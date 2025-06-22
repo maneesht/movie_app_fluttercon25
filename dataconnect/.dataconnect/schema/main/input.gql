@@ -45,6 +45,14 @@ input Movie_Data {
   """
   externalId_expr: String_Expr
   """
+  ✨ Generated from Field `Movie`.`genre` of type `String!`
+  """
+  genre: String
+  """
+  ✨ `_expr` server value variant of `genre` (✨ Generated from Field `Movie`.`genre` of type `String!`)
+  """
+  genre_expr: String_Expr
+  """
   ✨ Generated from Field `Movie`.`imageUrl` of type `String!`
   """
   imageUrl: String
@@ -113,6 +121,10 @@ input Movie_Filter {
   ✨ Generated from Field `Movie`.`externalId` of type `String`
   """
   externalId: String_Filter
+  """
+  ✨ Generated from Field `Movie`.`genre` of type `String!`
+  """
+  genre: String_Filter
   """
   ✨ Generated from Field `Movie`.`imageUrl` of type `String!`
   """
@@ -183,6 +195,10 @@ input Movie_Having {
   ✨ Generated from Field `Movie`.`externalId_count` of type `Int!`
   """
   externalId_count: Int_Filter
+  """
+  ✨ Generated from Field `Movie`.`genre_count` of type `Int!`
+  """
+  genre_count: Int_Filter
   """
   ✨ Generated from Field `Movie`.`id_count` of type `Int!`
   """
@@ -278,6 +294,10 @@ input Movie_Order {
   ✨ Generated from Field `Movie`.`externalId` of type `String`
   """
   externalId: OrderDirection
+  """
+  ✨ Generated from Field `Movie`.`genre` of type `String!`
+  """
+  genre: OrderDirection
   """
   ✨ Generated from Field `Movie`.`imageUrl` of type `String!`
   """

@@ -1,6 +1,7 @@
 import 'package:movie_app_fluttercon25/model/movie.dart';
-import 'package:movie_app_fluttercon25/model/movie_json.dart';
 import 'package:movie_app_fluttercon25/repositories/movies/movie_repository.dart';
+
+import '../../services/firebase/firebase_data_service.dart';
 
 class MovieRepositoryFirebase implements MovieRepository {
   MovieRepositoryFirebase({required FirebaseDataService firebaseDataService})
@@ -12,7 +13,17 @@ class MovieRepositoryFirebase implements MovieRepository {
   }
 
   @override
-  Future<MovieJson> getMovies() {
-    return _firebaseDataService.getMovies();
+  Future<List<Movie>> getMostRecentMovies() {
+    return _firebaseDataService.getMostRecentMovies();
+  }
+
+  @override
+  Future<List<Movie>> getTopTenMovies() {
+    return _firebaseDataService.getTopTenMovies();
+  }
+
+  @override
+  Future<List<Movie>> getAllMovies() {
+    return _firebaseDataService.getAllMovies();
   }
 }

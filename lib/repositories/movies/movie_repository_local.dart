@@ -16,7 +16,17 @@ class MovieRepositoryLocal implements MovieRepository {
   }
 
   @override
-  Future<MovieJson> getMovies() {
-    return _localDataService.getMovies();
+  Future<List<Movie>> getAllMovies() {
+    return _localDataService.getAllMovies();
+  }
+
+  @override
+  Future<List<Movie>> getTopTenMovies() {
+    return _localDataService.getTopTenMovies();
+  }
+
+  @override
+  Future<List<Movie>> getMostRecentMovies() {
+    return _localDataService.getMostRecentMovies();
   }
 }

@@ -1,3 +1,4 @@
 - [ ] Clean up logo and make sure it doesn't have any extra height
 - [ ] Create better fake data
 - [ ] Pre-seed database with new releases and top rated
+- [ ] Create a file that translates the different models from and to one another.
