@@ -26,4 +26,9 @@ class MovieRepositoryFirebase implements MovieRepository {
   Future<List<Movie>> getAllMovies() {
     return _firebaseDataService.getAllMovies();
   }
+
+  @override
+  Future<Movie> toggleMovieWatched(String id) {
+    return _firebaseDataService.toggleMovieWatched(id);
+  }
 }

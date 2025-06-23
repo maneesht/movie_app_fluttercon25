@@ -16,9 +16,7 @@ class MovieDetail extends StatelessWidget {
         builder: (context, snapshot) {
           if (snapshot.hasData) {
             return Stack(children: <Widget>[
-              Expanded(
-                  child: Image.network(snapshot.data!.imageUrl,
-                      fit: BoxFit.fitHeight)),
+              Image.network(snapshot.data!.imageUrl, fit: BoxFit.fitHeight),
               Align(
                 alignment: Alignment.bottomRight,
                 child: Text(snapshot.data!.description),
@@ -27,6 +25,7 @@ class MovieDetail extends StatelessWidget {
           }
           if (snapshot.hasError) {
             print(snapshot.error);
+            print(snapshot.stackTrace);
           }
           return const CircularProgressIndicator();
         });

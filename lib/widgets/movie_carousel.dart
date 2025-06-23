@@ -3,6 +3,8 @@ import 'package:go_router/go_router.dart';
 import 'package:movie_app_fluttercon25/model/movie.dart';
 import 'package:movie_app_fluttercon25/pages/home/home.dart';
 
+import '../pages/home/home_viewmodel.dart';
+
 const double FONT_LARGE = 20;
 
 class MovieCarousel extends StatelessWidget {
@@ -10,13 +12,16 @@ class MovieCarousel extends StatelessWidget {
       {super.key,
       required this.movies,
       required this.title,
-      this.size = MovieSize.large});
+      this.size = MovieSize.large,
+      required this.model});
 
   final List<Movie> movies;
 
   final String title;
 
   final MovieSize size;
+
+  final HomeViewModel model;
 
   @override
   Widget build(BuildContext context) {
@@ -35,12 +40,24 @@ class MovieCarousel extends StatelessWidget {
                 child: CarouselView(
                     scrollDirection: Axis.horizontal,
                     itemExtent: MovieSize.large == size ? 200 : 160,
-                    onTap: (int index) {
-                      context.push('/movie/${movies[index].id}');
-                    },
+                    enableSplash: false,
                     children: movies.map((movie) {
-                      return Image.network(movie.imageUrl,
-                          fit: BoxFit.fitWidth);
+                      return Stack(children: [
+                        InkWell(
+                          child: Image.network(movie.imageUrl,
+                              fit: BoxFit.fitWidth),
+                          onTap: () {
+                            context.push('/movie/${movie.id}');
+                          },
+                        ),
+                        IconButton(
+                            onPressed: () {
+                              model.toggleWatched(movie.id);
+                            },
+                            icon: Icon(movie.watched
+                                ? Icons.remove_red_eye
+                                : Icons.remove_red_eye_outlined))
+                      ]);
                     }).toList()))
           ],
         ));

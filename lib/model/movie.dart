@@ -5,7 +5,8 @@ class Movie {
   String imageUrl;
   String description;
   int releaseYear;
-  int rating;
+  double rating;
+  bool watched;
   Movie(
       {required this.title,
       required this.genre,
@@ -13,7 +14,8 @@ class Movie {
       required this.id,
       required this.description,
       required this.rating,
-      required this.releaseYear});
+      required this.releaseYear,
+      this.watched = false});
 
   static Movie fromJson(e) {
     return Movie(
@@ -23,6 +25,7 @@ class Movie {
         id: e['id'],
         description: e['description'],
         rating: e['rating'],
-        releaseYear: e['releaseYear']);
+        releaseYear: e['releaseYear'],
+        watched: e['watched'] ?? false);
   }
 }

@@ -29,4 +29,9 @@ class MovieRepositoryLocal implements MovieRepository {
   Future<List<Movie>> getMostRecentMovies() {
     return _localDataService.getMostRecentMovies();
   }
+
+  @override
+  Future<Movie> toggleMovieWatched(String id) {
+    return _localDataService.toggleWatched(id);
+  }
 }
