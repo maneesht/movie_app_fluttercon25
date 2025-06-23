@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "firebase-admin": "^13.4.0",
+    "typescript": "^5.8.3"
+  },
+  "name": "movie_app_fluttercon25",
+  "description": "A new Flutter project.",
+  "version": "1.0.0",
+  "main": "seed-data.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "seedData": "ts-node seed-data.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,29 @@
+{
+  "users": [
+    {
+      "id": "fe234583-ed10-4a94-85ae-54d6f7dee68d",
+      "name": "Alice Johnson",
+      "email": "alice.j@example.com"
+    },
+    {
+      "id": "d2ba7016-0174-4fc8-9746-fd901590dbf9",
+      "name": "Bob Williams",
+      "email": "bob.w@example.com"
+    },
+    {
+      "id": "0f092bfa-4b01-41a1-9aec-602e877fd2e5",
+      "name": "Charlie Brown",
+      "email": "charlie.b@example.com"
+    },
+    {
+      "id": "6384d384-56dd-405c-9865-c27524778011",
+      "name": "Diana Prince",
+      "email": "diana.p@example.com"
+    },
+    {
+      "id": "314f81c5-4dc0-4ac2-8a6a-aeb4ae51de75",
+      "name": "Evan Wright",
+      "email": "evan.w@example.com"
+    }
+  ]
+}

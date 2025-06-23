@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movie_app_fluttercon25/model/movie.dart';
+import 'package:movie_app_fluttercon25/ui/movie_carousel_builder.dart';
 import 'package:movie_app_fluttercon25/widgets/movie_carousel.dart';
 
 import 'home_viewmodel.dart';
@@ -32,57 +33,18 @@ class Home extends StatelessWidget {
             listenable: model,
             builder: (context, child) {
               return Column(children: [
-                FutureBuilder(
+                MovieCarouselBuilder(
+                    title: "Top 10 Movies",
                     future: model.movieRepository.getTopTenMovies(),
-                    builder: (context, AsyncSnapshot<List<Movie>> snapshot) {
-                      if (snapshot.hasError) {
-                        print(snapshot.stackTrace);
-                        return Text(snapshot.error.toString());
-                      }
-                      if (snapshot.hasData) {
-                        return MovieCarousel(
-                          movies: snapshot.data!,
-                          title: "Top 10 Movies",
-                          model: model,
-                        );
-                      } else {
-                        return const CircularProgressIndicator();
-                      }
-                    }),
-                FutureBuilder(
-                  future: model.movieRepository.getMostRecentMovies(),
-                  builder: (context, AsyncSnapshot<List<Movie>> snapshot) {
-                    if (snapshot.hasError) {
-                      return Text(snapshot.error.toString());
-                    }
-                    if (snapshot.hasData) {
-                      return MovieCarousel(
-                          movies: snapshot.data!,
-                          title: "New Releases",
-                          size: MovieSize.small,
-                          model: model);
-                    } else {
-                      return const CircularProgressIndicator();
-                    }
-                  },
-                ),
-                FutureBuilder(
-                  future: model.movieRepository.getAllMovies(),
-                  builder: (context, AsyncSnapshot<List<Movie>> snapshot) {
-                    if (snapshot.hasError) {
-                      return Text(snapshot.error.toString());
-                    }
-                    if (snapshot.hasData) {
-                      return MovieCarousel(
-                          movies: snapshot.data!,
-                          title: "All Movies",
-                          size: MovieSize.small,
-                          model: model);
-                    } else {
-                      return const CircularProgressIndicator();
-                    }
-                  },
-                ),
+                    model: model),
+                MovieCarouselBuilder(
+                    title: "New Releases",
+                    future: model.movieRepository.getMostRecentMovies(),
+                    model: model),
+                MovieCarouselBuilder(
+                    title: "All Movies",
+                    future: model.movieRepository.getAllMovies(),
+                    model: model),
               ]);
             })
       ],
