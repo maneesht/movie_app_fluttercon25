@@ -61,17 +61,17 @@ input Movie_Data {
   """
   imageUrl_expr: String_Expr
   """
-  ✨ Generated from Field `Movie`.`rating` of type `Int!`
+  ✨ Generated from Field `Movie`.`rating` of type `Float!`
   """
-  rating: Int
+  rating: Float
   """
-  ✨ `_expr` server value variant of `rating` (✨ Generated from Field `Movie`.`rating` of type `Int!`)
+  ✨ `_expr` server value variant of `rating` (✨ Generated from Field `Movie`.`rating` of type `Float!`)
   """
-  rating_expr: Int_Expr
+  rating_expr: Float_Expr
   """
-  ✨ `_update` server value variant of `rating` (✨ Generated from Field `Movie`.`rating` of type `Int!`)
+  ✨ `_update` server value variant of `rating` (✨ Generated from Field `Movie`.`rating` of type `Float!`)
   """
-  rating_update: [Int_Update!]
+  rating_update: [Float_Update!]
   """
   ✨ Generated from Field `Movie`.`releaseYear` of type `Int!`
   """
@@ -130,9 +130,9 @@ input Movie_Filter {
   """
   imageUrl: String_Filter
   """
-  ✨ Generated from Field `Movie`.`rating` of type `Int!`
+  ✨ Generated from Field `Movie`.`rating` of type `Float!`
   """
-  rating: Int_Filter
+  rating: Float_Filter
   """
   ✨ Generated from Field `Movie`.`releaseYear` of type `Int!`
   """
@@ -220,9 +220,9 @@ input Movie_Having {
   """
   title_count: Int_Filter
   """
-  ✨ Generated from Field `Movie`.`rating_sum` of type `Int`
+  ✨ Generated from Field `Movie`.`rating_sum` of type `Float`
   """
-  rating_sum: Int_Filter
+  rating_sum: Float_Filter
   """
   ✨ Generated from Field `Movie`.`releaseYear_sum` of type `Int`
   """
@@ -236,17 +236,17 @@ input Movie_Having {
   """
   releaseYear_avg: Float_Filter
   """
-  ✨ Generated from Field `Movie`.`rating_min` of type `Int`
+  ✨ Generated from Field `Movie`.`rating_min` of type `Float`
   """
-  rating_min: Int_Filter
+  rating_min: Float_Filter
   """
   ✨ Generated from Field `Movie`.`releaseYear_min` of type `Int`
   """
   releaseYear_min: Int_Filter
   """
-  ✨ Generated from Field `Movie`.`rating_max` of type `Int`
+  ✨ Generated from Field `Movie`.`rating_max` of type `Float`
   """
-  rating_max: Int_Filter
+  rating_max: Float_Filter
   """
   ✨ Generated from Field `Movie`.`releaseYear_max` of type `Int`
   """
@@ -303,7 +303,7 @@ input Movie_Order {
   """
   imageUrl: OrderDirection
   """
-  ✨ Generated from Field `Movie`.`rating` of type `Int!`
+  ✨ Generated from Field `Movie`.`rating` of type `Float!`
   """
   rating: OrderDirection
   """

@@ -155,7 +155,7 @@ extend type Movie {
     Set to true to sum the distinct values.
     """
     distinct: Boolean = false
-  ): Int @fdc_generated(from: "Movie.rating", purpose: QUERY_SUM)
+  ): Float @fdc_generated(from: "Movie.rating", purpose: QUERY_SUM)
   """
   ✨ Sum the `releaseYear` field in the `Movie` table.
   """
@@ -186,7 +186,7 @@ extend type Movie {
   """
   ✨ Minimum of the `rating` field in the `Movie` table.
   """
-  rating_min: Int @fdc_generated(from: "Movie.rating", purpose: QUERY_MIN)
+  rating_min: Float @fdc_generated(from: "Movie.rating", purpose: QUERY_MIN)
   """
   ✨ Minimum of the `releaseYear` field in the `Movie` table.
   """
@@ -194,7 +194,7 @@ extend type Movie {
   """
   ✨ Maximum of the `rating` field in the `Movie` table.
   """
-  rating_max: Int @fdc_generated(from: "Movie.rating", purpose: QUERY_MAX)
+  rating_max: Float @fdc_generated(from: "Movie.rating", purpose: QUERY_MAX)
   """
   ✨ Maximum of the `releaseYear` field in the `Movie` table.
   """
