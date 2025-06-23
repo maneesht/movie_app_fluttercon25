@@ -3,7 +3,8 @@ import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
 import 'package:movie_app_fluttercon25/pages/home/home.dart';
 import 'package:movie_app_fluttercon25/pages/home/home_viewmodel.dart';
-import 'package:movie_app_fluttercon25/pages/sign_in.dart';
+import 'package:movie_app_fluttercon25/pages/sign_in/sign_in.dart';
+import 'package:movie_app_fluttercon25/pages/sign_in/signin_viewmodel.dart';
 import 'package:provider/provider.dart';
 
 import '../pages/detail/movie_detail.dart';
@@ -33,5 +34,9 @@ final List<GoRoute> routes = [
       path: homePath,
       builder: (context, state) =>
           Home(model: HomeViewModel(movieRepository: context.read()))),
-  GoRoute(path: signInPath, builder: (context, state) => const SignIn())
+  GoRoute(
+      path: signInPath,
+      builder: (context, state) => SignIn(
+            model: SigninViewModel(authRepository: context.read()),
+          ))
 ];
