@@ -17,10 +17,10 @@ class AddWatchedVariablesBuilder {
   }
 }
 
-class AddWatchedWatchedMovieInsert {
+class AddWatchedWatchedMovieUpsert {
   String userId;
   String movieId;
-  AddWatchedWatchedMovieInsert.fromJson(dynamic json):
+  AddWatchedWatchedMovieUpsert.fromJson(dynamic json):
   userId = nativeFromJson<String>(json['userId']),movieId = nativeFromJson<String>(json['movieId']);
 
   Map<String, dynamic> toJson() {
@@ -30,25 +30,25 @@ class AddWatchedWatchedMovieInsert {
     return json;
   }
 
-  AddWatchedWatchedMovieInsert({
+  AddWatchedWatchedMovieUpsert({
     required this.userId,
     required this.movieId,
   });
 }
 
 class AddWatchedData {
-  AddWatchedWatchedMovieInsert watchedMovie_insert;
+  AddWatchedWatchedMovieUpsert watchedMovie_upsert;
   AddWatchedData.fromJson(dynamic json):
-  watchedMovie_insert = AddWatchedWatchedMovieInsert.fromJson(json['watchedMovie_insert']);
+  watchedMovie_upsert = AddWatchedWatchedMovieUpsert.fromJson(json['watchedMovie_upsert']);
 
   Map<String, dynamic> toJson() {
     Map<String, dynamic> json = {};
-    json['watchedMovie_insert'] = watchedMovie_insert.toJson();
+    json['watchedMovie_upsert'] = watchedMovie_upsert.toJson();
     return json;
   }
 
   AddWatchedData({
-    required this.watchedMovie_insert,
+    required this.watchedMovie_upsert,
   });
 }
 

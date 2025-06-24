@@ -42,5 +42,5 @@ mutation RemoveWatched($movieId: UUID!) @auth(level: USER) {
 }
 
 mutation AddWatched($movieId: UUID!) @auth(level: USER) {
-    watchedMovie_insert(data: { userId_expr: "auth.uid", movieId: $movieId })
+    watchedMovie_upsert(data: { userId_expr: "auth.uid", movieId: $movieId })
 }

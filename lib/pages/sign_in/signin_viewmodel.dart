@@ -15,6 +15,7 @@ class SigninViewModel {
       } else {
         signedIn = await _authRepository.signInMobile();
       }
+      print('signed in!');
       await _authRepository.addUser(signedIn);
       return true;
     } catch (e) {

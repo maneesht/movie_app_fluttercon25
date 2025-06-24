@@ -3,6 +3,7 @@ import { getDataConnect } from 'firebase-admin/data-connect';
 import * as movieJson from './lib/static/movies.json';
 
 initializeApp();
+process.env.DATA_CONNECT_EMULATOR_HOST="127.0.0.1:9399"
 const dataConnect = getDataConnect({ location: 'us-central1', serviceId: 'movieappfluttercon25' });
 
 interface Movie {

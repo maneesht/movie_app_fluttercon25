@@ -53,13 +53,12 @@
 
 
 type User @table {
-  userId: UUID! @default(expr: "auth.uid")
+  id: String! @default(expr: "auth.uid")
   displayName: String
   email: String
 }
 
 type Movie @table {
-  movieId: UUID!
   title: String!
   rating: Float!
   description: String!

@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart' show FirebaseAuth;
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:movie_app_fluttercon25/model/movie.dart';
@@ -13,6 +14,7 @@ class Home extends StatelessWidget {
   final List<Movie> movies = [];
   @override
   Widget build(BuildContext context) {
+    print(FirebaseAuth.instance.currentUser?.uid);
     return ListView(
       children: [
         Row(

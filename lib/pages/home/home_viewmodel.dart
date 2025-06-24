@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 import 'package:movie_app_fluttercon25/repositories/movies/movie_repository.dart';
 import 'package:movie_app_fluttercon25/repositories/sign_in/auth_repository.dart';
