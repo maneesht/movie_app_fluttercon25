@@ -18,7 +18,11 @@ class FirebaseDataService {
     throw UnimplementedError();
   }
 
-  Future<Movie> toggleMovieWatched(String id) async {
+  Future<bool> toggleMovieWatched(String id) async {
+    throw UnimplementedError();
+  }
+
+  Future<bool> isWatched(String id) async {
     throw UnimplementedError();
   }
 

@@ -28,7 +28,12 @@ class MovieRepositoryFirebase implements MovieRepository {
   }
 
   @override
-  Future<Movie> toggleMovieWatched(String id) {
+  Future<bool> toggleMovieWatched(String id) {
     return _firebaseDataService.toggleMovieWatched(id);
+  }
+
+  @override
+  Future<bool> isWatched(String id) {
+    return _firebaseDataService.isWatched(id);
   }
 }

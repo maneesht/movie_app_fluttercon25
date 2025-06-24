@@ -27,7 +27,7 @@ class MovieCarouselBuilder extends StatelessWidget {
           if (snapshot.hasData) {
             return MovieCarousel(
               movies: snapshot.data!,
-              title: "Top 10 Movies",
+              title: title,
               model: model,
             );
           } else {

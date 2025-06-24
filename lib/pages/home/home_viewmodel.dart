@@ -11,6 +11,10 @@ class HomeViewModel extends ChangeNotifier {
     notifyListeners();
   }
 
+  Future<bool> isWatched(String movieId) async {
+    return movieRepository.isWatched(movieId);
+  }
+
   Future<void> signOut() async {
     await authRepository.logOut();
   }

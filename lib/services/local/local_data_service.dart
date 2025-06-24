@@ -6,6 +6,7 @@ import 'package:movie_app_fluttercon25/model/movie.dart';
 
 class LocalDataService {
   List<Movie> _movies = [];
+  Map<String, bool> _watched = {};
 
   Future<List<Movie>> getAllMovies() async {
     if (_movies.isEmpty) {
@@ -39,12 +40,13 @@ class LocalDataService {
     return movies.firstWhere((e) => e.id == id);
   }
 
-  Future<Movie> toggleWatched(String id) async {
-    List<Movie> movies = await getAllMovies();
-    int index = movies.indexWhere((testMovie) => testMovie.id == id);
-    Movie movie = movies[index];
-    movie.watched = !movie.watched;
-    return movie;
+  Future<bool> isWatched(String id) async {
+    return _watched[id] ?? false;
+  }
+
+  Future<bool> toggleWatched(String id) async {
+    _watched[id] = !(await isWatched(id));
+    return _watched[id]!;
   }
 
   Future<void> addUser(User user) async {

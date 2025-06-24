@@ -42,22 +42,34 @@ class MovieCarousel extends StatelessWidget {
                     itemExtent: MovieSize.large == size ? 200 : 160,
                     enableSplash: false,
                     children: movies.map((movie) {
-                      return Stack(children: [
-                        InkWell(
-                          child: Image.network(movie.imageUrl,
-                              fit: BoxFit.fitWidth),
-                          onTap: () {
-                            context.push('/movie/${movie.id}');
-                          },
-                        ),
-                        IconButton(
-                            onPressed: () {
-                              model.toggleWatched(movie.id);
-                            },
-                            icon: Icon(movie.watched
-                                ? Icons.remove_red_eye
-                                : Icons.remove_red_eye_outlined))
-                      ]);
+                      return FutureBuilder(
+                          future: model.movieRepository.isWatched(movie.id),
+                          builder: (context, snapshot) {
+                            if (snapshot.hasError) {
+                              print(snapshot.stackTrace);
+                              return Text(snapshot.error.toString());
+                            }
+                            if (!snapshot.hasData) {
+                              return const CircularProgressIndicator();
+                            }
+                            final isWatched = snapshot.data!;
+                            return Stack(children: [
+                              InkWell(
+                                child: Image.network(movie.imageUrl,
+                                    fit: BoxFit.fitWidth),
+                                onTap: () {
+                                  context.push('/movie/${movie.id}');
+                                },
+                              ),
+                              IconButton(
+                                  onPressed: () {
+                                    model.toggleWatched(movie.id);
+                                  },
+                                  icon: Icon(isWatched
+                                      ? Icons.remove_red_eye
+                                      : Icons.remove_red_eye_outlined))
+                            ]);
+                          });
                     }).toList()))
           ],
         ));
