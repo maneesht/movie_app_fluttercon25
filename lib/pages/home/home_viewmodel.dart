@@ -6,8 +6,12 @@ class HomeViewModel extends ChangeNotifier {
   HomeViewModel({required this.movieRepository, required this.authRepository});
   final MovieRepository movieRepository;
   final AuthRepository authRepository;
-  void toggleWatched(String movieId) async {
-    await movieRepository.toggleMovieWatched(movieId);
+  void toggleWatched(String movieId, bool watched) async {
+    if (watched) {
+      await movieRepository.removeMovieWatched(movieId);
+    } else {
+      await movieRepository.addMovieWatched(movieId);
+    }
     notifyListeners();
   }
 
