@@ -47,5 +47,94 @@
 "    genre",
 "  }",
 "}"]
+	},
+	"Translate Movie Model": {
+		"scope": "dart, flutter",
+		"prefix": "convertModel",
+		"body": [
+			".then((res) {",
+      "return res.data.movies",
+          ".map((e) => Movie(",
+              "description: e.description,",
+              "genre: e.genre,",
+              "id: e.id,",
+              "imageUrl: e.imageUrl,",
+              "releaseYear: e.releaseYear,",
+              "rating: e.rating,",
+              "title: e.title))",
+          ".toList();",
+    "});"
+		],
+		"description": "Convert movie model"
+	},
+	"Populate Top 10 Most Recent Movies": {
+		"scope": "dart, flutter",
+		"body": ["return MoviesConnector.instance.top10movies().execute().then((res) {",
+"      return res.data.movies",
+"          .map((e) => Movie(",
+"              description: e.description,",
+"              genre: e.genre,",
+"              id: e.id,",
+"              imageUrl: e.imageUrl,",
+"              releaseYear: e.releaseYear,",
+"              rating: e.rating,",
+"              title: e.title))",
+"          .toList();",
+"    });"],
+"prefix": "top10MostRecent"
+	},
+	"Populate getMovie": {
+		"scope": "dart, flutter",
+		"prefix": "getMovie",
+		"body": ["return MoviesConnector.instance.getMovie(id: id).execute().then((e) {",
+"      return Movie(",
+"          description: e.data.movie!.description,",
+"          genre: e.data.movie!.genre,",
+"          id: e.data.movie!.id,",
+"          imageUrl: e.data.movie!.imageUrl,",
+"          releaseYear: e.data.movie!.releaseYear,",
+"          rating: e.data.movie!.rating,",
+"          title: e.data.movie!.title);",
+"    });"]
+	},
+	"Populate All Movies": {
+		"scope": "dart, flutter",
+		"body": ["return MoviesConnector.instance.listAllMovies().execute().then((res) {",
+"      return res.data.movies",
+"          .map((e) => Movie(",
+"              description: e.description,",
+"              genre: e.genre,",
+"              id: e.id,",
+"              imageUrl: e.imageUrl,",
+"              releaseYear: e.releaseYear,",
+"              rating: e.rating,",
+"              title: e.title))",
+"          .toList();",
+"    });"],
+"prefix": "listAllMovies"
+	},
+	"Add Movie to Watched": {
+		"body": [
+"           await MoviesConnector.instance.addWatched(id: id).execute();",
+"           return true;"
+		],
+		"scope": "dart, flutter",
+		"prefix": "addWatched"
+	},
+	"Remove Movie from Watched": {
+		"body": [
+"           final res = await MoviesConnector.instance.removeWatched(id: id).execute();",
+"           return res.data.watch_delete?.movieId != null;"
+		],
+		"scope": "dart, flutter",
+		"prefix": "removeWatched"
+	},
+	"Check if movie has been watched": {
+		"body": [
+"    final res = await MoviesConnector.instance.isMovieWatched(id: id).execute();",
+"    return res.data.watch?.movieId != null;"
+		],
+		"scope": "dart, flutter",
+		"prefix": "isWatched"
 	}
 }
