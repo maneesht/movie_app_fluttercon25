@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:firebase_auth/firebase_auth.dart' show User;
 import 'package:flutter/services.dart';
 import 'package:movie_app_fluttercon25/model/movie.dart';
 
@@ -44,5 +45,9 @@ class LocalDataService {
     Movie movie = movies[index];
     movie.watched = !movie.watched;
     return movie;
+  }
+
+  Future<void> addUser(User user) async {
+    // dummy user add
   }
 }

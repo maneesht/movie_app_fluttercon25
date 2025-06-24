@@ -17,7 +17,8 @@ class SigninViewModel {
       }
       await _authRepository.addUser(signedIn);
       return true;
-    } catch (_) {
+    } catch (e) {
+      print(e);
       return false;
     }
   }

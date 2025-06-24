@@ -1,11 +1,17 @@
 import 'package:flutter/foundation.dart';
 import 'package:movie_app_fluttercon25/repositories/movies/movie_repository.dart';
+import 'package:movie_app_fluttercon25/repositories/sign_in/auth_repository.dart';
 
 class HomeViewModel extends ChangeNotifier {
-  HomeViewModel({required this.movieRepository});
+  HomeViewModel({required this.movieRepository, required this.authRepository});
   final MovieRepository movieRepository;
+  final AuthRepository authRepository;
   void toggleWatched(String movieId) async {
     await movieRepository.toggleMovieWatched(movieId);
     notifyListeners();
+  }
+
+  Future<void> signOut() async {
+    await authRepository.logOut();
   }
 }

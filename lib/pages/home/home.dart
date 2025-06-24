@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:movie_app_fluttercon25/model/movie.dart';
 import 'package:movie_app_fluttercon25/ui/movie_carousel_builder.dart';
-import 'package:movie_app_fluttercon25/widgets/movie_carousel.dart';
 
 import 'home_viewmodel.dart';
 
@@ -23,8 +23,13 @@ class Home extends StatelessWidget {
             ),
             const Spacer(),
             IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.search),
+              onPressed: () async {
+                await model.signOut();
+                if (context.mounted) {
+                  context.go('/sign-in');
+                }
+              },
+              icon: const Icon(Icons.account_circle),
               iconSize: 30,
             ),
           ],

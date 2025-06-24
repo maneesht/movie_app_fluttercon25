@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:movie_app_fluttercon25/model/movie.dart';
 
 class FirebaseDataService {
@@ -18,6 +19,10 @@ class FirebaseDataService {
   }
 
   Future<Movie> toggleMovieWatched(String id) async {
+    throw UnimplementedError();
+  }
+
+  Future<void> addUser(User user) async {
     throw UnimplementedError();
   }
 }

@@ -32,8 +32,10 @@ final List<GoRoute> routes = [
       }),
   GoRoute(
       path: homePath,
-      builder: (context, state) =>
-          Home(model: HomeViewModel(movieRepository: context.read()))),
+      builder: (context, state) => Home(
+          model: HomeViewModel(
+              movieRepository: context.read(),
+              authRepository: context.read()))),
   GoRoute(
       path: signInPath,
       builder: (context, state) => SignIn(

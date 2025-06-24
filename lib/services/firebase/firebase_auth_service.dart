@@ -2,7 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 class FirebaseAuthService {
-  signInMobile() async {
+  Future<User> signInMobile() async {
     final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
 
     // Obtain the auth details from the request
@@ -14,12 +14,12 @@ class FirebaseAuthService {
       accessToken: googleAuth?.accessToken,
       idToken: googleAuth?.idToken,
     );
-    return FirebaseAuth.instance.signInWithCredential(credential);
+    return (await FirebaseAuth.instance.signInWithCredential(credential)).user!;
   }
 
-  signInWeb() async {
+  Future<User> signInWeb() async {
     GoogleAuthProvider googleProvider = GoogleAuthProvider();
-    return FirebaseAuth.instance.signInWithPopup(googleProvider);
+    return (await FirebaseAuth.instance.signInWithPopup(googleProvider)).user!;
   }
 
   addUserToDatabase(User user) async {

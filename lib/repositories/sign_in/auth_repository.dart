@@ -1,4 +1,4 @@
-import 'package:firebase_auth/firebase_auth.dart' show User;
+import 'package:firebase_auth/firebase_auth.dart' show User, UserCredential;
 
 abstract class AuthRepository {
   Future<User> signInMobile();
