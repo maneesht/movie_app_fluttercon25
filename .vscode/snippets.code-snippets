@@ -1,0 +1,46 @@
+{
+	// Place your movie_app_fluttercon25 workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"Most Recent Movies": {
+		"scope": "dart, flutter",
+		"prefix": "mostRecent",
+		"body": [
+				"return res.data.movies.map((e) => Movie(",
+		],
+		"description": "Add most recent"
+	},
+	"Translate Movie Model": {
+		"scope": "dart, flutter",
+		"prefix": "convertModel",
+		"body": [
+			".then((res) {",
+      "return res.data.movies",
+          ".map((e) => Movie(",
+              "description: e.description,",
+              "genre: e.genre,",
+              "id: e.id,",
+              "imageUrl: e.imageUrl,",
+              "releaseYear: e.releaseYear,",
+              "rating: e.rating,",
+              "title: e.title))",
+          ".toList();",
+    "});"
+		],
+		"description": "Convert movie model"
+
+	}
+}

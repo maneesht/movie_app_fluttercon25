@@ -3,7 +3,7 @@ import 'package:movie_app_fluttercon25/config/routes.dart';
 import 'package:movie_app_fluttercon25/pages/home/home.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'main_development.dart' as development;
-// import 'firebase_development.dart' as firebaseDevelopment;
+import 'firebase_development.dart' as firebaseDevelopment;
 import 'firebase_options.dart';
 import 'config/theme.dart';
 
@@ -12,7 +12,7 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  development.main();
+  firebaseDevelopment.main();
   // runApp(const MainApp());
   // TODO: Use Firebase environment
 }

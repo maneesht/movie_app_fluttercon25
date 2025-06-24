@@ -44,9 +44,14 @@ class LocalDataService {
     return _watched[id] ?? false;
   }
 
-  Future<bool> toggleWatched(String id) async {
-    _watched[id] = !(await isWatched(id));
-    return _watched[id]!;
+  Future<bool> addMovieWatched(String id) async {
+    _watched[id] = true;
+    return true;
+  }
+
+  Future<bool> removeMovieWatched(String id) async {
+    _watched.remove(id);
+    return true;
   }
 
   Future<void> addUser(User user) async {

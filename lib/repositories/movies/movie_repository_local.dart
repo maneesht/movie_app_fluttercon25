@@ -31,8 +31,13 @@ class MovieRepositoryLocal implements MovieRepository {
   }
 
   @override
-  Future<bool> toggleMovieWatched(String id) {
-    return _localDataService.toggleWatched(id);
+  Future<bool> addMovieWatched(String id) {
+    return _localDataService.addMovieWatched(id);
+  }
+
+  @override
+  Future<bool> removeMovieWatched(String id) {
+    return _localDataService.removeMovieWatched(id);
   }
 
   @override

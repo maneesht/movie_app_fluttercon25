@@ -63,7 +63,7 @@ class MovieCarousel extends StatelessWidget {
                               ),
                               IconButton(
                                   onPressed: () {
-                                    model.toggleWatched(movie.id);
+                                    model.toggleWatched(movie.id, isWatched);
                                   },
                                   icon: Icon(isWatched
                                       ? Icons.remove_red_eye
